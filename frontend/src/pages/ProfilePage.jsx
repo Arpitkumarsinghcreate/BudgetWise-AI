@@ -24,7 +24,10 @@ export default function ProfilePage() {
     setError("");
     fetchProfile()
       .then(p => {
-        const toAbsolute = (url) => (url && url.startsWith("/uploads/")) ? `${import.meta.env.VITE_API_URL}${url}`;
+        const toAbsolute = (url) =>
+  url && url.startsWith("/uploads/")
+    ? `${import.meta.env.VITE_API_URL}${url}`
+    : url;
         const next = {
           name: p.name || form.name,
           email: p.email || email,
