@@ -58,7 +58,10 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOriginPattern("*");
+        config.setAllowedOrigins(List.of(
+    "http://localhost:5173",
+    "https://budget-wise-2uyhrd0oa-arpitkumarsinghcreates-projects.vercel.app"
+));
         config.addAllowedHeader("*");
         config.addExposedHeader("Authorization");
         config.addExposedHeader("Content-Type");
