@@ -58,7 +58,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOriginPattern("http://localhost:*");
+        config.addAllowedOriginPattern("*");
         config.addAllowedHeader("*");
         config.addExposedHeader("Authorization");
         config.addExposedHeader("Content-Type");
